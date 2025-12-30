@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Required</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="box">
+  <h2>Password required</h2>
+  <p class="hint">The name that always made you smile.</p>
+  <p class="code">S.......n</p>
+
+  <input type="password" id="password" placeholder="Enter password">
+  <button onclick="check()">Enter</button>
+
+  <p id="error"></p>
+</div>
+
+<div id="content">
+  <img src="image.jpg" alt="Pride and Prejudice">
+
+  <div class="text">
+    <p><em>
+      Even in <strong>Pride and Prejudice</strong>, everything found its way to goodness in the end.
+      Misunderstandings faded, hearts were understood, and they found happiness where it truly belonged.
+    </em></p>
+
+    <p><em>
+      Some stories take time.<br>
+      Some feelings need silence.<br>
+      But what is sincere always finds its way — quietly, honestly, and beautifully.
+    </em></p>
+
+    <p><em>Perhaps this is one of those stories.</em></p>
+  </div>
+</div>
+
+<script>
+function check() {
+  const pass = document.getElementById("password").value;
+  if (pass === "Samiraxon") {
+    document.querySelector(".box").style.display = "none";
+    document.getElementById("content").style.display = "block";
+  } else {
+    document.getElementById("error").innerText = "Wrong password";
+  }
+}
+</script>
+
+</body>
+</html>
